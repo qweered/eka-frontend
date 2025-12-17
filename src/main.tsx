@@ -1,12 +1,13 @@
-import { createRoot } from 'react-dom/client'
 import { context, connectLogger } from '@reatom/core'
 import { reatomContext } from '@reatom/react'
+import { createRoot } from 'react-dom/client'
 
 import App from './App.tsx'
+import './index.css'
 
 const rootFrame = context.start()
 if (import.meta.env.DEV) {
-  rootFrame.run(connectLogger)
+    rootFrame.run(connectLogger)
 }
 
 const root = document.getElementById('root')
@@ -15,6 +16,7 @@ if (!root) {
 }
 
 createRoot(root).render(
-<reatomContext.Provider value={rootFrame}>
-    <App />
-</reatomContext.Provider>)
+    <reatomContext.Provider value={rootFrame}>
+        <App />
+    </reatomContext.Provider>
+)
