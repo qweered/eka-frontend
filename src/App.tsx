@@ -11,8 +11,8 @@ const App = reatomComponent(
     <>
       <nav>
         <Button onClick={wrap(() => homeRoute.go())}>Home</Button>
-        <Button onClick={wrap(() => ciRoute.go({ ciId: '1' }))}>User 1</Button>
-        <Button onClick={wrap(() => ciRoute.go({ ciId: '2' }))}>User 2</Button>
+        <Button onClick={wrap(() => ciRoute.go({ prId: '1' }))}>PR 1</Button>
+        <Button onClick={wrap(() => ciRoute.go({ prId: '2' }))}>PR 2</Button>
       </nav>
 
       <main>

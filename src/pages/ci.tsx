@@ -4,19 +4,14 @@ import { ciRoute } from '../routes'
 
 export const CiPage = reatomComponent(() => {
   const params = ciRoute()
-  if (!ciRoute.exact()) return null
 
-  const ready = ciRoute.loader.ready()
-  const ci = ciRoute.loader.data()
+  if (!ciRoute.exact() || !params) return null
+
+  const { isPending, isRejected, isFulfilled, data: pullRequest } = ciRoute.loader.status()
+  // XX: reatom imperfection, no error in status()
   const error = ciRoute.loader.error()
 
-  if (!ready) return <div>Loading...</div>
-  if (error) return <div>Error: {error.message}</div>
-
-  return (
-    <div>
-      <h1>{ci.name}</h1>
-      <p>{ci.bio}</p>
-    </div>
-  )
+  if (isPending) return <div>Loading... pullRequest: {params.prId}</div>
+  if (isRejected) return <div>Error: {error?.message}</div>
+  if (isFulfilled) return <div>Success: {pullRequest.title}</div>
 }, 'CiPage')
