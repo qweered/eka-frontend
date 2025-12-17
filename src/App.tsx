@@ -1,32 +1,18 @@
-import viteLogo from '/vite.svg'
-import { useState } from 'react'
+// oxlint-disable no-default-export
+import { atom, wrap } from '@reatom/core'
+import { reatomComponent } from '@reatom/react'
 
-import reactLogo from './assets/react.svg'
-import './App.css'
+const page = atom(0, 'page').extend((target) => ({
+    next: () => target.set((state) => state + 1),
+    prev: () => target.set((state) => Math.max(0, state - 1)),
+}))
 
-function App() {
-    const [count, setCount] = useState(0)
-
-    return (
-        <>
-            <div>
-                <a href="https://vite.dev" target="_blank">
-                    <img src={viteLogo} className="logo" alt="Vite logo" />
-                </a>
-                <a href="https://react.dev" target="_blank">
-                    <img src={reactLogo} className="logo react" alt="React logo" />
-                </a>
-            </div>
-            <h1>Vite + React</h1>
-            <div className="card">
-                <button type="button" onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-                <p>
-                    Edit <code>src/App.tsx</code> and save to test HMR
-                </p>
-            </div>
-            <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
-        </>
-    )
-}
+const App = reatomComponent(() => (
+    <>
+        <button type="button" onClick={wrap(page.prev)}>Prev</button>
+        <button type="button" onClick={wrap(page.next)}>Next</button>
+        <p>Page {page()}</p>
+    </>
+))
 
 export default App

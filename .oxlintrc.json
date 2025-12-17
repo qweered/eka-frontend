@@ -11,7 +11,6 @@
         "oxc",
         "react",
         "react-perf",
-        "nextjs",
         "import",
         "jsdoc",
         "jsx-a11y",
@@ -34,7 +33,6 @@
         "oxc/no-async-await": "allow", // this is stupid
         "oxc/no-rest-spread-properties": "allow", // this is stupid
         "oxc/no-optional-chaining": "allow", // this is stupid
-        "node/no-process-env": "allow", // not applicable for nextjs
 
         "react/jsx-filename-extension": ["error", { "extensions": [".tsx"] }],
         "eslint/no-console": ["error", { "allow": ["error"] }],
@@ -45,7 +43,6 @@
             }
         ],
         "typescript/explicit-module-boundary-types": "allow", // too strict for now
-        "import/no-default-export": "allow", // not for nextjs
         "typescript/explicit-function-return-type": [
             "error",
             {
