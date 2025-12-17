@@ -9,8 +9,7 @@ import { Separator } from '@/components/ui/separator'
 
 export const HomePage = reatomComponent(() => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
-      {/* Hero Section */}
+    <div className="min-h-screen bg-linear-to-br from-slate-50 to-slate-100">
       <section className="relative px-6 py-24 text-center lg:px-8">
         <div className="mx-auto max-w-4xl">
           <div className="mb-8 flex justify-center">
@@ -38,7 +37,6 @@ export const HomePage = reatomComponent(() => {
 
       <Separator className="bg-slate-200/50" />
 
-      {/* Stats Section */}
       <section className="px-6 py-16 lg:px-8">
         <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
@@ -87,7 +85,6 @@ export const HomePage = reatomComponent(() => {
 
       <Separator className="bg-slate-200/50" />
 
-      {/* Projects Section */}
       <section className="px-6 py-24 lg:px-8">
         <div className="mx-auto max-w-6xl">
           <div className="text-center">
@@ -98,7 +95,6 @@ export const HomePage = reatomComponent(() => {
           </div>
 
           <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3">
-            {/* Corepkgs Card */}
             <Card className="group relative overflow-hidden border-0 bg-white/60 backdrop-blur-sm transition-all hover:shadow-lg hover:shadow-slate-200/50">
               <CardHeader>
                 <div className="flex items-center gap-3">
@@ -131,14 +127,17 @@ export const HomePage = reatomComponent(() => {
                     </Badge>
                     <span className="text-slate-500">91.4% Nix</span>
                   </div>
-                  <Button variant="outline" className="w-full group-hover:bg-slate-50">
+                  <Button
+                    variant="outline"
+                    className="w-full group-hover:bg-slate-50"
+                    href="https://github.com/ekala-project/corepkgs"
+                  >
                     View Repository
                   </Button>
                 </div>
               </CardContent>
             </Card>
 
-            {/* EkaCI Card */}
             <Card className="group relative overflow-hidden border-0 bg-white/60 backdrop-blur-sm transition-all hover:shadow-lg hover:shadow-slate-200/50">
               <CardHeader>
                 <div className="flex items-center gap-3">
@@ -171,14 +170,17 @@ export const HomePage = reatomComponent(() => {
                     </Badge>
                     <span className="text-slate-500">96.3% Rust</span>
                   </div>
-                  <Button variant="outline" className="w-full group-hover:bg-slate-50">
+                  <Button
+                    variant="outline"
+                    className="w-full group-hover:bg-slate-50"
+                    href="https://github.com/ekala-project/eka-ci"
+                  >
                     View Repository
                   </Button>
                 </div>
               </CardContent>
             </Card>
 
-            {/* Ekapkgs Update Card */}
             <Card className="group relative overflow-hidden border-0 bg-white/60 backdrop-blur-sm transition-all hover:shadow-lg hover:shadow-slate-200/50">
               <CardHeader>
                 <div className="flex items-center gap-3">
@@ -211,7 +213,11 @@ export const HomePage = reatomComponent(() => {
                     </Badge>
                     <span className="text-slate-500">98.5% Rust</span>
                   </div>
-                  <Button variant="outline" className="w-full group-hover:bg-slate-50">
+                  <Button
+                    variant="outline"
+                    className="w-full group-hover:bg-slate-50"
+                    href="https://github.com/ekala-project/ekapkgs-update"
+                  >
                     View Repository
                   </Button>
                 </div>
@@ -221,7 +227,6 @@ export const HomePage = reatomComponent(() => {
         </div>
       </section>
 
-      {/* Features Section */}
       <section className="px-6 py-24 lg:px-8">
         <div className="mx-auto max-w-6xl">
           <div className="text-center">
@@ -285,7 +290,6 @@ export const HomePage = reatomComponent(() => {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="px-6 py-24 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Ready to get started?</h2>
@@ -306,84 +310,8 @@ export const HomePage = reatomComponent(() => {
 
       <Separator className="bg-slate-200/50" />
 
-      {/* Footer */}
       <footer className="bg-slate-50">
         <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
-            <Card className="col-span-1 md:col-span-2 border-0 bg-transparent shadow-none">
-              <CardHeader className="px-0 pb-4">
-                <h3 className="text-lg font-semibold text-slate-900">Ekala Project</h3>
-              </CardHeader>
-              <CardContent className="px-0">
-                <p className="text-sm text-slate-600">
-                  A modern Nix ecosystem featuring core packages, intelligent CI/CD, and automated package management.
-                  Built for developers who value reproducibility and elegant design.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 bg-transparent shadow-none">
-              <CardHeader className="px-0 pb-4">
-                <h4 className="text-sm font-semibold text-slate-900">Projects</h4>
-              </CardHeader>
-              <CardContent className="px-0">
-                <ul className="mt-4 space-y-2 text-sm">
-                  <li>
-                    <a
-                      href="https://github.com/ekala-project/corepkgs"
-                      className="text-slate-600 hover:text-slate-900 transition-colors"
-                    >
-                      Corepkgs
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://github.com/ekala-project/eka-ci"
-                      className="text-slate-600 hover:text-slate-900 transition-colors"
-                    >
-                      EkaCI
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://github.com/ekala-project/ekapkgs-update"
-                      className="text-slate-600 hover:text-slate-900 transition-colors"
-                    >
-                      Ekapkgs Update
-                    </a>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 bg-transparent shadow-none">
-              <CardHeader className="px-0 pb-4">
-                <h4 className="text-sm font-semibold text-slate-900">Resources</h4>
-              </CardHeader>
-              <CardContent className="px-0">
-                <ul className="mt-4 space-y-2 text-sm">
-                  <li>
-                    <a
-                      href="https://github.com/ekala-project"
-                      className="text-slate-600 hover:text-slate-900 transition-colors"
-                    >
-                      GitHub Organization
-                    </a>
-                  </li>
-                  <li>
-                    <Button variant="link" className="h-auto p-0 text-slate-600 hover:text-slate-900">
-                      Documentation
-                    </Button>
-                  </li>
-                  <li>
-                    <Button variant="link" className="h-auto p-0 text-slate-600 hover:text-slate-900">
-                      Community
-                    </Button>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
           <Separator className="my-8 bg-slate-200/50" />
           <div className="text-center">
             <p className="text-sm text-slate-500">© 2025 Ekala Project. Built with ❤️ for the Nix community.</p>

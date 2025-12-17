@@ -42,9 +42,16 @@ function Button({
   className,
   variant = 'default',
   size = 'default',
+  href,
   ...props
-}: ButtonPrimitive.Props & VariantProps<typeof buttonVariants>) {
-  return <ButtonPrimitive data-slot="button" className={cn(buttonVariants({ variant, size, className }))} {...props} />
+}: ButtonPrimitive.Props & VariantProps<typeof buttonVariants> & { href?: string }) {
+  return href ? (
+    <a href={href}>
+      <ButtonPrimitive data-slot="button" className={cn(buttonVariants({ variant, size, className }))} {...props} />
+    </a>
+  ) : (
+    <ButtonPrimitive data-slot="button" className={cn(buttonVariants({ variant, size, className }))} {...props} />
+  )
 }
 
 export { Button, buttonVariants }
