@@ -1,27 +1,27 @@
 pre-commit:
-    jobs:
-        - name: format
-          glob: '*.{ts,tsx,mts}'
-          run: pnpm fmt {staged_files}
-          stage_fixed: true
-          fail_text: '❌ oxfmt failed'
+  jobs:
+    - name: format
+      glob: '*.{ts,tsx,mts}'
+      run: pnpm fmt {staged_files}
+      stage_fixed: true
+      fail_text: '❌ oxfmt failed'
 
-        - name: lint
-          glob: '*.{ts,tsx,mts}'
-          run: pnpm lint {staged_files}
-          stage_fixed: true
-          fail_text: '❌ oxlint failed'
+    - name: lint
+      glob: '*.{ts,tsx,mts}'
+      run: pnpm lint {staged_files}
+      stage_fixed: true
+      fail_text: '❌ oxlint failed'
 
 pre-push:
-    parallel: true
-    jobs:
-        - name: typecheck
-          glob: '*.{ts,tsx,mts}'
-          run: pnpm typecheck
-          fail_text: '❌ TypeScript type checking failed'
-        # - name: tests
-        #   glob: '*.{ts,tsx,mts}'
-        #   run: pnpm test run
-        #   fail_text: '❌ Tests failed'
+  parallel: true
+  jobs:
+    - name: typecheck
+      glob: '*.{ts,tsx,mts}'
+      run: pnpm typecheck
+      fail_text: '❌ TypeScript type checking failed'
+    # - name: tests
+    #   glob: '*.{ts,tsx,mts}'
+    #   run: pnpm test run
+    #   fail_text: '❌ Tests failed'
 
 colors: true

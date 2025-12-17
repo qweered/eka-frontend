@@ -1,26 +1,26 @@
 // oxlint-disable no-default-export
-import { atom, wrap } from '@reatom/core'
+import { wrap } from '@reatom/core'
 import { reatomComponent } from '@reatom/react'
 
-import { ComponentExample } from './components/component-example'
+import { Button } from '@/components/ui/button'
+import { CiPage } from '@/pages/ci'
+import { ciRoute, homeRoute } from '@/routes'
 
-const page = atom(0, 'page').extend((target) => ({
-    next: () => target.set((state) => state + 1),
-    prev: () => target.set((state) => Math.max(0, state - 1))
-}))
-
-const App = reatomComponent(() => (
+const App = reatomComponent(
+  () => (
     <>
-        <button type="button" className="bg-blue-500 text-white p-2 rounded-md" onClick={wrap(page.prev)}>
-            Prev
-        </button>
-        <button type="button" className="bg-blue-500 text-white p-2 rounded-md" onClick={wrap(page.next)}>
-            Next
-        </button>
-        <p>Page {page()}</p>
+      <nav>
+        <Button onClick={wrap(() => homeRoute.go())}>Home</Button>
+        <Button onClick={wrap(() => ciRoute.go({ ciId: '1' }))}>User 1</Button>
+        <Button onClick={wrap(() => ciRoute.go({ ciId: '2' }))}>User 2</Button>
+      </nav>
 
-        <ComponentExample />
+      <main>
+        <CiPage />
+      </main>
     </>
-))
+  ),
+  'App'
+)
 
 export default App

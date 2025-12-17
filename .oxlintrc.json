@@ -1,57 +1,57 @@
 {
-    "$schema": "./node_modules/oxlint/configuration_schema.json",
-    "env": {
-        "browser": true
-    },
-    // TODO: enable type-aware when it's ready
-    "plugins": [
-        "eslint",
-        "typescript",
-        "unicorn",
-        "oxc",
-        "react",
-        "react-perf",
-        "import",
-        "jsdoc",
-        "jsx-a11y",
-        "node",
-        "promise",
-        "jest",
-        "vitest"
-    ],
-    "categories": {
-        // "perf": "warn",
-        "restriction": "error"
-        // "suspicious": "error",
-        // "pedantic": "warn",
-        // "style": "warn"
-    },
-    "rules": {
-        "no-undefined": "allow", // too strict
-        "no-plusplus": "allow", // too strict
-        "no-conditional-in-test": "allow", // too strict
-        "no-async-await": "allow", // this is stupid
-        "only-export-components": "allow", // this is unnecessary
-        "no-rest-spread-properties": "allow", // this is stupid
-        "no-optional-chaining": "allow", // this is stupid
-        "prefer-tag-over-role": "allow", // this is too strict
-        "anchor-has-content": "allow", // this has lots of false positives
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "env": {
+    "browser": true
+  },
+  // TODO: enable type-aware when it's ready
+  "plugins": [
+    "eslint",
+    "typescript",
+    "unicorn",
+    "oxc",
+    "react",
+    "react-perf",
+    "import",
+    "jsdoc",
+    "jsx-a11y",
+    "node",
+    "promise",
+    "jest",
+    "vitest"
+  ],
+  "categories": {
+    // "perf": "warn",
+    "restriction": "error"
+    // "suspicious": "error",
+    // "pedantic": "warn",
+    // "style": "warn"
+  },
+  "rules": {
+    "no-undefined": "allow", // too strict
+    "no-plusplus": "allow", // too strict
+    "no-conditional-in-test": "allow", // too strict
+    "no-async-await": "allow", // this is stupid
+    "only-export-components": "allow", // this is unnecessary
+    "no-rest-spread-properties": "allow", // this is stupid
+    "no-optional-chaining": "allow", // this is stupid
+    "prefer-tag-over-role": "allow", // this is too strict
+    "anchor-has-content": "allow", // this has lots of false positives
 
-        "jsx-filename-extension": ["error", { "extensions": [".tsx"] }],
-        "no-console": ["error", { "allow": ["error"] }],
-        "array-type": [
-            "error",
-            {
-                "default": "array-simple"
-            }
-        ],
-        "explicit-module-boundary-types": "allow", // too strict for now
-        "explicit-function-return-type": [
-            "error",
-            {
-                "allowExpressions": true,
-                "allowFunctionsWithoutTypeParameters": true
-            }
-        ]
-    }
+    "jsx-filename-extension": ["error", { "extensions": [".tsx"] }],
+    "no-console": ["error", { "allow": ["error"] }],
+    "array-type": [
+      "error",
+      {
+        "default": "array-simple"
+      }
+    ],
+    "explicit-module-boundary-types": "allow", // too strict for now
+    "explicit-function-return-type": [
+      "error",
+      {
+        "allowExpressions": true,
+        "allowFunctionsWithoutTypeParameters": true
+      }
+    ]
+  }
 }
