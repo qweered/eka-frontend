@@ -1,6 +1,6 @@
 import { reatomComponent } from '@reatom/react'
 
-import { ciRoute } from '../routes'
+import { ciRoute } from '@/routes'
 
 export const CiPage = reatomComponent(() => {
   const params = ciRoute()
