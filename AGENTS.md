@@ -311,6 +311,15 @@ export const MyComponent = reatomComponent(() => {
 - Static assets are handled by Vite
 - Ensure `index.html` references correct entry points
 
+### GitHub Pages Deployment
+
+- Deployment is automated via GitHub Actions workflow (`.github/workflows/deploy.yml`)
+- The workflow builds and deploys on every push to `main` branch
+- Base path is set to `/eka-frontend/` in `vite.config.ts` for GitHub Pages
+- The site will be available at `https://qweered.github.io/eka-frontend/`
+- To deploy manually, push to `main` or trigger the workflow from GitHub Actions tab
+- Ensure GitHub Pages is enabled in repository settings (Settings → Pages → Source: GitHub Actions)
+
 ### shadcn/ui and Base UI
 
 - This project uses shadcn/ui components built on **Base UI** (`@base-ui/react`), not Radix UI

@@ -3,9 +3,11 @@ import { z } from 'zod'
 
 import { $fetch } from '@/lib/better-fetch'
 
-export const homeRoute = reatomRoute('')
+const baseUrl = 'eka-frontend/'
+
+export const homeRoute = reatomRoute(baseUrl)
 export const ciRoute = reatomRoute({
-  path: 'ci/:prId',
+  path: `${baseUrl}ci/:prId`,
   params: z.object({ prId: z.string().min(1) }),
   async loader(params) {
     const { data, error } = await wrap(

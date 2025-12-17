@@ -60,7 +60,6 @@ const App = reatomComponent(() => {
         </div>
       </header>
 
-      {/* Main Content */}
       <main>
         {isHome && <HomePage />}
         {isCi && <CiPage />}
