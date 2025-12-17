@@ -1,6 +1,6 @@
+import tailwindcss from '@tailwindcss/vite'
 // oxlint-disable no-default-export
 import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
 import { defineConfig } from 'vite'
 
 // https://vite.dev/config/

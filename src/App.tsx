@@ -2,6 +2,8 @@
 import { atom, wrap } from '@reatom/core'
 import { reatomComponent } from '@reatom/react'
 
+import { ComponentExample } from './components/component-example'
+
 const page = atom(0, 'page').extend((target) => ({
     next: () => target.set((state) => state + 1),
     prev: () => target.set((state) => Math.max(0, state - 1))
@@ -16,6 +18,8 @@ const App = reatomComponent(() => (
             Next
         </button>
         <p>Page {page()}</p>
+
+        <ComponentExample />
     </>
 ))
 

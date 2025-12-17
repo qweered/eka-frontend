@@ -27,23 +27,26 @@
         // "style": "warn"
     },
     "rules": {
-        "eslint/no-undefined": "allow", // too strict
-        "eslint/no-plusplus": "allow", // too strict
-        "eslint-plugin-jest/no-conditional-in-test": "allow", // too strict
-        "oxc/no-async-await": "allow", // this is stupid
-        "oxc/no-rest-spread-properties": "allow", // this is stupid
-        "oxc/no-optional-chaining": "allow", // this is stupid
+        "no-undefined": "allow", // too strict
+        "no-plusplus": "allow", // too strict
+        "no-conditional-in-test": "allow", // too strict
+        "no-async-await": "allow", // this is stupid
+        "only-export-components": "allow", // this is unnecessary
+        "no-rest-spread-properties": "allow", // this is stupid
+        "no-optional-chaining": "allow", // this is stupid
+        "prefer-tag-over-role": "allow", // this is too strict
+        "anchor-has-content": "allow", // this has lots of false positives
 
-        "react/jsx-filename-extension": ["error", { "extensions": [".tsx"] }],
-        "eslint/no-console": ["error", { "allow": ["error"] }],
-        "typescript/array-type": [
+        "jsx-filename-extension": ["error", { "extensions": [".tsx"] }],
+        "no-console": ["error", { "allow": ["error"] }],
+        "array-type": [
             "error",
             {
                 "default": "array-simple"
             }
         ],
-        "typescript/explicit-module-boundary-types": "allow", // too strict for now
-        "typescript/explicit-function-return-type": [
+        "explicit-module-boundary-types": "allow", // too strict for now
+        "explicit-function-return-type": [
             "error",
             {
                 "allowExpressions": true,
