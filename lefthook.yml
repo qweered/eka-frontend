@@ -1,7 +1,7 @@
 pre-commit:
   jobs:
     - name: format
-      glob: '*.{ts,tsx,mts}'
+      glob: '*.{ts,tsx,mts,json,yml,yaml,md}'
       run: pnpm fmt {staged_files}
       stage_fixed: true
       fail_text: '❌ oxfmt failed'
