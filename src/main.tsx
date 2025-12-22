@@ -1,5 +1,6 @@
 import { context, connectLogger } from '@reatom/core'
 import { reatomContext } from '@reatom/react'
+import { ViteThemeProvider } from '@space-man/react-theme-animation'
 import { createRoot } from 'react-dom/client'
 
 import App from './App.tsx'
@@ -17,6 +18,8 @@ if (!root) {
 
 createRoot(root).render(
   <reatomContext.Provider value={rootFrame}>
-    <App />
+    <ViteThemeProvider defaultTheme="system" storageKey="theme" attribute="class">
+      <App />
+    </ViteThemeProvider>
   </reatomContext.Provider>
 )

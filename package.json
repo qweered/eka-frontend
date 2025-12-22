@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "oxlint",
-    "lint:fix": "oxlint --fix --fix-suggestions --fix-dangerously --deny-warnings",
+    "lint": "oxlint --fix --fix-suggestions --type-aware --deny-warnings",
+    "lint:fix": "pnpm lint --fix-dangerously",
     "fmt": "oxfmt",
     "typecheck": "tsc -b --noEmit",
     "upd": "taze --write",
@@ -21,6 +21,7 @@
     "@fontsource-variable/inter": "^5.2.8",
     "@reatom/core": "^1000.1.0",
     "@reatom/react": "^1000.0.0",
+    "@space-man/react-theme-animation": "^2.0.0",
     "@tabler/icons-react": "^3.36.0",
     "@tailwindcss/vite": "^4.1.18",
     "class-variance-authority": "^0.7.1",
@@ -51,6 +52,7 @@
     "lefthook": "^2.0.12",
     "oxfmt": "^0.20.0",
     "oxlint": "^1.35.0",
+    "oxlint-tsgolint": "^0.10.0",
     "taze": "^19.9.2",
     "typescript": "^5.9.3",
     "vite": "^8.0.0-beta.4"

@@ -110,6 +110,7 @@ pnpm fmt
 - Follow shadcn/ui component patterns
 - Use CSS variables for theming (via `next-themes`)
 - Prefer Tailwind classes over custom CSS
+- Always use `size-*` utility classes instead of separate `w-* h-*` classes when width and height are equal (e.g., use `size-4` instead of `w-4 h-4`)
 
 ### Naming Conventions
 
