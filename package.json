@@ -10,6 +10,7 @@
     "lint:fix": "oxlint --fix --fix-suggestions --fix-dangerously --deny-warnings",
     "fmt": "oxfmt",
     "typecheck": "tsc -b --noEmit",
+    "upd": "taze --write",
     "preview": "vite preview",
     "precommit": "lefthook run pre-commit",
     "prepush": "lefthook run pre-push"
@@ -30,11 +31,11 @@
     "input-otp": "^1.4.2",
     "next-themes": "^0.4.6",
     "react": "^19.2.3",
-    "react-day-picker": "^9.12.0",
+    "react-day-picker": "^9.13.0",
     "react-dom": "^19.2.3",
-    "react-resizable-panels": "^4.0.1",
+    "react-resizable-panels": "^4.0.14",
     "recharts": "2.15.4",
-    "shadcn": "^3.6.1",
+    "shadcn": "^3.6.2",
     "sonner": "^2.0.7",
     "tailwind-merge": "^3.4.0",
     "tailwindcss": "^4.1.18",
@@ -48,9 +49,10 @@
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.1.2",
     "lefthook": "^2.0.12",
-    "oxfmt": "^0.18.0",
-    "oxlint": "^1.33.0",
-    "typescript": "~5.9.3",
-    "vite": "8.0.0-beta.2"
+    "oxfmt": "^0.20.0",
+    "oxlint": "^1.35.0",
+    "taze": "^19.9.2",
+    "typescript": "^5.9.3",
+    "vite": "^8.0.0-beta.4"
   }
 }
