@@ -1,15 +1,22 @@
 import { reatomComponent } from '@reatom/react'
-import { IconBrandGithub, IconRocket, IconRefresh, IconTool, IconStar, IconUsers } from '@tabler/icons-react'
+import {
+  IconBrandGithub,
+  IconBrandDiscord,
+  IconRocket,
+  IconRefresh,
+  IconTool,
+  IconStar,
+  IconUsers
+} from '@tabler/icons-react'
 
 import { Avatar, AvatarFallback } from '@/components/ui/avatar'
 import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
 
 export const HomePage = reatomComponent(() => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background to-muted/20">
+    <div className="min-h-screen bg-linear-to-br from-background to-muted/20">
       <section className="relative px-6 py-24 text-center lg:px-8">
         <div className="mx-auto max-w-4xl">
           <div className="mb-8 flex justify-center">
@@ -22,16 +29,6 @@ export const HomePage = reatomComponent(() => {
             A modern Nix ecosystem featuring core packages, intelligent CI/CD, and automated package management. Built
             for developers who value reproducibility, automation, and elegant design.
           </p>
-          <div className="mt-10 flex justify-center gap-4">
-            <Button size="lg" className="gap-2">
-              <IconRocket className="size-4" />
-              Get Started
-            </Button>
-            <Button variant="outline" size="lg" className="gap-2">
-              <IconBrandGithub className="size-4" />
-              View on GitHub
-            </Button>
-          </div>
         </div>
       </section>
 
@@ -49,7 +46,7 @@ export const HomePage = reatomComponent(() => {
                     </AvatarFallback>
                   </Avatar>
                 </div>
-                <div className="mt-4 text-3xl font-bold text-foreground">96</div>
+                <div className="mt-4 text-3xl font-bold text-foreground">46</div>
                 <div className="text-muted-foreground">GitHub Stars</div>
               </CardContent>
             </Card>
@@ -62,7 +59,7 @@ export const HomePage = reatomComponent(() => {
                     </AvatarFallback>
                   </Avatar>
                 </div>
-                <div className="mt-4 text-3xl font-bold text-foreground">11</div>
+                <div className="mt-4 text-3xl font-bold text-foreground">5</div>
                 <div className="text-muted-foreground">Contributors</div>
               </CardContent>
             </Card>
@@ -127,13 +124,14 @@ export const HomePage = reatomComponent(() => {
                     </Badge>
                     <span className="text-muted-foreground">91.4% Nix</span>
                   </div>
-                  <Button
-                    variant="outline"
-                    className="w-full group-hover:bg-accent"
+                  <a
                     href="https://github.com/ekala-project/corepkgs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-border bg-background px-4 py-2 text-sm font-medium hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
                   >
                     View Repository
-                  </Button>
+                  </a>
                 </div>
               </CardContent>
             </Card>
@@ -166,17 +164,18 @@ export const HomePage = reatomComponent(() => {
                   <div className="flex items-center justify-between text-sm">
                     <Badge variant="outline" className="gap-1">
                       <IconStar className="h-3 w-3" />
-                      50 stars
+                      51 stars
                     </Badge>
-                    <span className="text-muted-foreground">96.3% Rust</span>
+                    <span className="text-muted-foreground">96.7% Rust</span>
                   </div>
-                  <Button
-                    variant="outline"
-                    className="w-full group-hover:bg-accent"
+                  <a
                     href="https://github.com/ekala-project/eka-ci"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-border bg-background px-4 py-2 text-sm font-medium hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
                   >
                     View Repository
-                  </Button>
+                  </a>
                 </div>
               </CardContent>
             </Card>
@@ -208,18 +207,18 @@ export const HomePage = reatomComponent(() => {
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <Badge variant="outline" className="gap-1">
-                      <IconStar className="h-3 w-3" />
-                      New
+                      <IconStar className="h-3 w-3" />0 stars
                     </Badge>
-                    <span className="text-muted-foreground">98.5% Rust</span>
+                    <span className="text-muted-foreground">98.8% Rust</span>
                   </div>
-                  <Button
-                    variant="outline"
-                    className="w-full group-hover:bg-accent"
+                  <a
                     href="https://github.com/ekala-project/ekapkgs-update"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-border bg-background px-4 py-2 text-sm font-medium hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
                   >
                     View Repository
-                  </Button>
+                  </a>
                 </div>
               </CardContent>
             </Card>
@@ -295,19 +294,75 @@ export const HomePage = reatomComponent(() => {
       </section>
 
       <section className="px-6 py-24 lg:px-8">
+        <div className="mx-auto max-w-6xl">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+              Complete Project Ecosystem
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Discover all repositories that make up the Ekala ecosystem
+            </p>
+          </div>
+
+          <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-2">
+            <Card className="text-center border-0 bg-card/60 backdrop-blur-sm transition-all hover:shadow-md hover:shadow-border/50">
+              <CardContent className="pt-6">
+                <Avatar className="mx-auto h-16 w-16 bg-primary/10">
+                  <AvatarFallback className="bg-primary/10 text-primary">
+                    <IconStar className="h-8 w-8" />
+                  </AvatarFallback>
+                </Avatar>
+                <h3 className="mt-4 text-lg font-semibold text-foreground">ekapkgs-roadmap</h3>
+                <p className="mt-2 text-sm text-muted-foreground">Community roadmap and project planning</p>
+                <div className="mt-4 text-3xl font-bold text-foreground">165</div>
+                <div className="text-muted-foreground">GitHub Stars</div>
+                <div className="mt-2 text-xs text-muted-foreground">3 contributors</div>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center border-0 bg-card/60 backdrop-blur-sm transition-all hover:shadow-md hover:shadow-border/50">
+              <CardContent className="pt-6">
+                <Avatar className="mx-auto h-16 w-16 bg-secondary">
+                  <AvatarFallback className="bg-secondary text-secondary-foreground">
+                    <IconTool className="h-8 w-8" />
+                  </AvatarFallback>
+                </Avatar>
+                <h3 className="mt-4 text-lg font-semibold text-foreground">eeps</h3>
+                <p className="mt-2 text-sm text-muted-foreground">Ekala Enhancement Proposals</p>
+                <div className="mt-4 text-3xl font-bold text-foreground">21</div>
+                <div className="text-muted-foreground">GitHub Stars</div>
+                <div className="mt-2 text-xs text-muted-foreground">5 contributors</div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 py-24 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Ready to get started?</h2>
           <p className="mt-4 text-lg text-muted-foreground">
             Join the Ekala ecosystem and experience modern Nix package management
           </p>
           <div className="mt-10 flex justify-center gap-4">
-            <Button size="lg" className="gap-2">
+            <a
+              href="https://github.com/ekala-project"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-3 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+            >
               <IconBrandGithub className="size-4" />
               Explore on GitHub
-            </Button>
-            <Button variant="outline" size="lg">
-              Read Documentation
-            </Button>
+            </a>
+            <a
+              href="https://discord.gg/JG6zmPTutq"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-background px-8 py-3 text-sm font-medium hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+            >
+              <IconBrandDiscord className="size-4" />
+              Join Discord
+            </a>
           </div>
         </div>
       </section>

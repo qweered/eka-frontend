@@ -4,8 +4,6 @@ import { ViteThemeProvider } from '@space-man/react-theme-animation'
 import { createRoot } from 'react-dom/client'
 
 import App from './App.tsx'
-import './index.css'
-
 const rootFrame = context.start()
 if (import.meta.env.DEV) {
   rootFrame.run(connectLogger)
