@@ -6,6 +6,36 @@
     <link rel="stylesheet" href="/src/index.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>eka-frontend</title>
+    <script>
+      (function() {
+        const storageKey = 'theme';
+        const attribute = 'class';
+        const defaultTheme = 'system';
+        
+        function getTheme() {
+          const stored = localStorage.getItem(storageKey);
+          if (stored) {
+            return stored;
+          }
+          return defaultTheme;
+        }
+        
+        function applyTheme(theme) {
+          const root = document.documentElement;
+          if (theme === 'system') {
+            const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            root.classList.remove('light', 'dark');
+            root.classList.add(systemTheme);
+          } else {
+            root.classList.remove('light', 'dark');
+            root.classList.add(theme);
+          }
+        }
+        
+        const theme = getTheme();
+        applyTheme(theme);
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
